@@ -20,7 +20,7 @@ variable "dns_project" {
 
 variable "dns_zone" {
   description = "DNS zone name where DNS records are placed."
-  default     = "demo"
+  default     = "" #REPLACE
 }
 
 variable "app_port" {

@@ -12,10 +12,10 @@ locals {
   )
 }
 
-data "google_dns_managed_zone" "dns" {
-  project = var.dns_project
-  name    = var.dns_zone
-}
+# data "google_dns_managed_zone" "dns" {
+#   project = var.dns_project
+#   name    = var.dns_zone
+# }
 
 data "google_compute_image" "my_image" {
   family  = "debian-11"

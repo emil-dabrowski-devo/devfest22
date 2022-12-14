@@ -1,7 +1,7 @@
-data "google_dns_managed_zone" "dns" {
-  project = var.dns_project
-  name    = var.dns_zone
-}
+# data "google_dns_managed_zone" "dns" {
+#   project = var.dns_project
+#   name    = var.dns_zone
+# }
 
 resource "google_compute_health_check" "hc" {
   project             = var.project_id
@@ -70,13 +70,13 @@ resource "google_compute_global_forwarding_rule" "http" {
 }
 
 
-resource "google_dns_record_set" "lb" {
-  project = var.dns_project
-  name    = local.fqdn
-  type    = "A"
-  ttl     = 300
+# resource "google_dns_record_set" "lb" {
+#   project = var.dns_project
+#   name    = local.fqdn
+#   type    = "A"
+#   ttl     = 300
 
-  managed_zone = data.google_dns_managed_zone.dns.name
+#   managed_zone = data.google_dns_managed_zone.dns.name
 
-  rrdatas = [google_compute_global_address.address.address]
-}
+#   rrdatas = [google_compute_global_address.address.address]
+# }

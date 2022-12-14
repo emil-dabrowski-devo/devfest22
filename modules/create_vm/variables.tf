@@ -24,12 +24,12 @@ variable "network_subnet" {
 
 variable "dns_project" {
   description = "Project name where DNS zones are managed."
-  default     = ""
+  default     = "" #REPLACE
 }
 
 variable "dns_zone" {
   description = "DNS zone name where DNS records are placed."
-  default     = ""
+  default     = "" #REPLACE
 }
 
 variable "region" {
